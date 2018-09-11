@@ -36,7 +36,7 @@ int main(){
 
    printf("encode array\n");
 
-  encodeArray(testInput, testOutput, 11); 
+  encodeArray(testInput, testOutput); 
 printf("-------array finished encoding-----------\n");
 /*
   for (int g = 0; g < 11; g++){
@@ -47,8 +47,12 @@ printf("-------array finished encoding-----------\n");
 
 
 
-    printf("opening file\n");
-    encodeFile("papers.txt");
+//    printf("opening file\n");
+  //  encodeFile("papers.txt");
+  
+    printf("keyboard input\n");
+
+    encodeText();
 
     return 0;
 }

@@ -10,7 +10,7 @@
 #define MENUCOMMANDS_H
 
 
-void encodeFile(char name[]);
+void encodeFile();
 
 
 void encodeText();

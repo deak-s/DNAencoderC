@@ -1,3 +1,3 @@
-test: main.c conversionFunctions.c encodingFunctions.c menuCommands.c 
-	gcc main.c conversionFunctions.c encodingFunctions.c menuCommands.c -o test -lm -I .
+test:  conversionFunctions.c encodingFunctions.c menuCommands.c menu.c 
+	gcc  conversionFunctions.c encodingFunctions.c menuCommands.c menu.c -o test -lm -lncurses -I .
 

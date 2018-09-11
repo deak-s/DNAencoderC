@@ -13,7 +13,7 @@
 int decToBase3(int x){
 
     int t = howManyTrit(x);
-    printf(" %d trits\n", t);
+//    printf(" %d trits\n", t);
     int array[t];
     int answer = 0;
     int decimalPlace = 1;
@@ -30,19 +30,17 @@ int decToBase3(int x){
 
 int *decToBase3Array(int dec){
     int t = howManyTrit(dec);
-    printf("dec array hmt %d\n", t);
     int *array = (int *)malloc( t * sizeof(int));
 
     for (int i = t - 1; i >=0; i--){
-        printf("adding %d at pos %d\n", dec % 3, i);
         array[i] = dec % 3;
         dec = floor(dec / 3);
     }
-
+/*
     for(int y = 0; y < t; y++){
         printf("%d", array[y]);
     }
-
+*/
     return array;
 }
 

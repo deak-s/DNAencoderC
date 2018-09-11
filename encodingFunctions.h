@@ -9,7 +9,7 @@
 #define ENCODINGFUNCTIONS_H
 //base 3 encode a line (with spaces
 
-int encodeArray(char input[], char output[], int length);
+int encodeArray(char input[], char output[]);
 
 
 #endif
