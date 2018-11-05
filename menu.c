@@ -21,7 +21,6 @@ int main(){
     getmaxyx(stdscr, yMax, xMax);
 
 
-
     
     WINDOW *menu = newwin(6, 8*(xMax/10), yMax-12, (xMax / 10));
     box(menu, 0, 0);
@@ -118,6 +117,31 @@ int main(){
     if(selected == 1){
 
 
+        mvprintw(yMax /2, (xMax/2) - 8, "keyboard input selected");
+
+        getch();
+        encodeText();
+        getch();
+        clear();
+        refresh();
+
+
+        char response;
+
+        do{
+            mvprintw(yMax /2, (xMax/2) - 10, "would you like to save results? (y/n)");
+            response = getch();
+
+            if(response == 'y'){
+                break;
+            }
+            else if(response == 'n'){
+                remove("results.txt");
+                break;
+            }
+            clear();
+            refresh();
+        } while (response != 'y' || response != 'n');
     }
 
 

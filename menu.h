@@ -1,2 +1,0 @@
-/*
- * @file menu.c

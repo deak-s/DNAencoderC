@@ -30,6 +30,12 @@ double logBase3(double x);
  */
 int howManyTrit(int x);
 
+/**
+ * @brief  encodes a ternary digit into a DNA base, depends on previous char
+ * @param[in] prev    previous char in sequence
+ * @param[in] trit    ternary digit to encode
+ * @return    char   encoded trit
+ */
 char encodeTrit(char prev, int trit);
 
 

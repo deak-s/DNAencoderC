@@ -2,7 +2,7 @@
  * @file main.c
  * @author Sophia Deak
  * @date Sept 2018
- * @brief ___
+ * @brief old main file - used prior to GUI addition
  */
 
 

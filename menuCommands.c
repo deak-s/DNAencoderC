@@ -18,7 +18,6 @@
 
 void encodeFile(char name[]){
 
-
     int y, x;
     getmaxyx(stdscr, y, x);
     FILE *file;
@@ -56,20 +55,28 @@ fclose(results);
 
 
 void encodeText(){
-    
+ 
+    int y, x;
+    getmaxyx(stdscr, y, x);
+   
     char line[100];
     char output[500];
 
     FILE *results = fopen("results.txt", "w");
 
     printf("enter text to encode\n");
-    fgets(line, 100, stdin);
+    
+    getstr(line);
 
-    printf("input is %s\n", line);
-    int x = encodeArray(line, output);
-    printf(" result is %.*s\n", x, output);
 
-    fprintf(results, "%.*s\n", x, output);
+    clear();
+    int encodedLine  = encodeArray(line, output);
+
+    mvprintw(y /3, x/2, "input is %s", line);
+    //printf(" result is %.*s\n", encodedLine, output);
+    mvprintw(y / 2, x / 3, " result is %.*s", encodedLine, output);
+
+    fprintf(results, "%.*s\n", encodedLine, output);
 
     fclose(results);
     

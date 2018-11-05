@@ -10,9 +10,15 @@
 #define MENUCOMMANDS_H
 
 
-void encodeFile();
+/**
+ * @brief wrapper function used by menu for encoding a file
+ * @param[in] name[]  char array of name of file to encode
+ */
+void encodeFile(char name[]);
 
-
+/**
+ * @brief wrapper function used by menu for encoding a line of text
+ */
 void encodeText();
 
 
